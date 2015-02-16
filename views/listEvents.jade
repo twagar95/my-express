@@ -1,0 +1,14 @@
+extends layout.jade
+
+block content
+  table.u-full-width
+    thead
+      tr
+        th Events
+    tbody
+    each item in myevents 
+      tr
+        td
+          b
+           a(href='/view/event/' + item.id)= item.type + " on " + item.repo.name
+          br

@@ -1,0 +1,15 @@
+extends layout.jade
+
+block content
+  table.u-full-width
+    thead
+      tr
+        th Repos
+    tbody
+    each item in repos  
+      tr
+        td
+          b
+           a(href='/view/repo/' + item.id)
+            =item.name
+          br
