@@ -22,6 +22,8 @@ require('./mongo/viewEvents')(app)
 require('./mongo/listRepos')(app)
 require('./mongo/viewRepos')(app)
 
+app.set('port', (process.env.PORT || 3000))
+
 var server = app.listen(process.env.PORT || 3000, function() {
 
     var host = server.address().address
